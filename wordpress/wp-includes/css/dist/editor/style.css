@@ -446,7 +446,7 @@ body.is-fullscreen-mode .interface-interface-skeleton{
   flex-shrink:0;
   margin-left:8px;
   max-width:100px;
-  overflow:none;
+  overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
 }
@@ -705,8 +705,8 @@ body.is-fullscreen-mode .interface-interface-skeleton{
 
 .editor-block-visibility__disabled-blocks-count{
   background-color:#fff;
-  border:1px solid #ddd;
-  border-width:1px 0;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
   box-shadow:-32px 0 0 0 #fff,32px 0 0 0 #fff;
   padding:8px;
   position:sticky;
@@ -1722,7 +1722,6 @@ body.is-fullscreen-mode .interface-interface-skeleton{
   max-width:100%;
   min-height:32px;
   text-align:left;
-  text-wrap:balance;
   text-wrap:pretty;
   white-space:normal;
 }
@@ -1846,7 +1845,6 @@ body.is-fullscreen-mode .interface-interface-skeleton{
 }
 .editor-post-publish-panel__prepublish .components-panel__body-title .components-button{
   align-items:flex-start;
-  text-wrap:balance;
   text-wrap:pretty;
 }
 
@@ -1935,7 +1933,7 @@ body.is-fullscreen-mode .interface-interface-skeleton{
     z-index:99998;
   }
 }
-@media (min-width:782px) and (not (prefers-reduced-motion)){
+@media (min-width:782px) and (prefers-reduced-motion: no-preference){
   .editor-post-publish-panel{
     animation:editor-post-publish-panel__slide-in-animation .1s forwards;
     transform:translateX(100%);
